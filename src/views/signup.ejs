@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup</title>
+
+    <link rel="stylesheet" href="/bootstrap/bootstrap.min.css">
+</head>
+<body>
+    <div class="d-flex flex-column justify-content-center align-items-center p-5"
+         style="height: 100%;">
+
+        <h1>Signup</h1>
+
+        <form class="d-flex flex-column" action="/signup" method="POST" id="signup-form">
+            <input class="mt-4" type="text" placeholder="Username: " id="username" name="username">
+            <input class="mt-2" type="password" placeholder="Password: " id="password" name="password">
+            <input class="mt-2" type="password" placeholder="Confirm password: " id="confirm-password">
+        
+            <button class="btn btn-primary mt-3" type="submit">
+                Signup
+            </button>
+            <span class="alert alert-danger" style="margin-top: 20px; display: none"
+                  id="error-message">
+                    
+            </span>
+        </form>
+    </div>
+
+    <script src="/js/signup-form-validation.js"></script>
+</body>
+</html>

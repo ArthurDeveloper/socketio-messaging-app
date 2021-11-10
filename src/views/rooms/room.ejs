@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= room_name %></title>
+
+    <link rel="stylesheet" href="/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/room.css">
+<body>
+    <div class="d-flex flex-column justify-content-center align-items-center p-5"
+         style="height: 100%;">
+        <h1><%= room_name %></h1>
+
+        <span class="text-secondary mb-3" id="username">
+            <%= username %>
+        </span>
+
+        <div style="width: 400px;">
+            <div class="border border-light" id="messages-box" 
+                 style="max-width: 100%; height: 275px; padding: 6px;">
+
+            </div>
+
+            <div class="d-flex flex-column">
+                <input placeholder="Leave a message..." id="message-input">
+                <button class="btn btn-primary btn-block mt-2 rounded" id="send-message-btn">
+                    Send
+                </button>
+            </d>
+        </div>
+
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/js/messaging.js"></script>
+</body>
+</html>
