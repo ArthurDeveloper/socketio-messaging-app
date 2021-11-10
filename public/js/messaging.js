@@ -1,4 +1,4 @@
-let socket = io('http://localhost:3000');
+let socket = io();
 
 const room_name = document.title.toLowerCase();
 const username = document.querySelector('#username').textContent.trim();
