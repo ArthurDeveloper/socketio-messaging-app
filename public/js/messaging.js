@@ -38,10 +38,12 @@ socket.on('sendMessage', ({ content, author }) => {
 
     const message = document.createElement('div');
     message.classList.add('message');
+    message.style.alignSelf = author === username ? 'flex-start' : 'flex-end';
     message.style.backgroundColor = author === username ? '#cccccc' : '#0099ff';
     message.textContent = content;
     
     const messageAuthor = document.createElement('span');
+    messageAuthor.style.alignSelf = author === username ? 'flex-start' : 'flex-end';
     messageAuthor.textContent = author === username ? 'You' : author;
     messageAuthor.classList.add('message-author');
     messageAuthor.classList.add('text-secondary');
