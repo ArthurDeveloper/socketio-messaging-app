@@ -2,10 +2,13 @@
   "name": "messaging-app",
   "version": "1.0.0",
   "description": "An application for sending messages.",
-  "main": "index.ts",
+  "main": "dist/index.js",
   "author": "ArthurDev",
   "license": "MIT",
   "scripts": {
+    "tsc": "tsc",
+    "build": "npm run tsc",
+    "start": "npm run build && node dist/index.js",
     "dev": "ts-node-dev --respawn --transpile-only src/index.ts"
   },
   "devDependencies": {
