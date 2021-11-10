@@ -8,7 +8,7 @@
   "scripts": {
     "tsc": "npx tsc",
     "build": "npm run tsc",
-    "postinstall": "npm run build && mv -i -v src/views dist/", 
+    "postinstall": "npm run build && mv -i -v src/views dist/",
     "start": "node dist/index.js",
     "dev": "ts-node-dev --respawn --transpile-only src/index.ts"
   },
@@ -17,8 +17,9 @@
   },
   "dependencies": {
     "@prisma/client": "^3.4.1",
-    "@types/cookie-parser": "^1.4.2",
     "@types/bcrypt": "^5.0.0",
+    "@types/cookie-parser": "^1.4.2",
+    "@types/cors": "^2.8.12",
     "@types/ejs": "^3.1.0",
     "@types/express": "^4.17.13",
     "@types/jsonwebtoken": "^8.5.5",
