@@ -3,6 +3,7 @@ import cookieParser from 'cookie-parser';
 import routes from './routes';
 import ejs from 'ejs';
 import { createServer } from 'http';
+import path from 'path';
 
 const app = express();
 
@@ -12,7 +13,7 @@ app.use('/bootstrap', express.static('node_modules/bootstrap/dist/css'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-app.set('views', __dirname + '/views');
+app.set('views', path.join(__dirname + '/views'));
 app.engine('ejs', ejs.renderFile);
 
 app.use(cookieParser());
