@@ -9,7 +9,7 @@
     "tsc": "tsc",
     "build": "npm run tsc",
     "start": "npm run build && node dist/index.js",
-    "dev": "ts-node-dev --respawn --transpile-only src/index.ts"
+    "dev": "ts-node-dev --respawn --transpile-only src/index.ts",
   },
   "devDependencies": {
     "@types/bcrypt": "^5.0.0",
