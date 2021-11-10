@@ -13,7 +13,7 @@ app.use('/bootstrap', express.static('node_modules/bootstrap/dist/css'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-app.set('views', path.join(__dirname + '/views'));
+app.set('views', path.join(__dirname, '/views'));
 app.engine('ejs', ejs.renderFile);
 
 app.use(cookieParser());
