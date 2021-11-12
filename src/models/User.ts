@@ -2,13 +2,14 @@ import prisma from './index';
 
 export default {
     async create(name: string, password: string) {
-        await prisma.user.create({
+        const user = await prisma.user.create({
             data: {
                 name,
                 password,
                 messages: {}
             }
         });
+        return user;
     },
     async get(name: string, password: string) {
         const user = await prisma.user.findFirst({
